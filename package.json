@@ -1,0 +1,23 @@
+{
+  "name": "youtube-backend-major-project",
+  "version": "1.0.0",
+  "description": "Youtube Clone Backend Oriented Major Project",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [
+    "JavaScript",
+    "Backend",
+    "NodeJS",
+    "ExpressJS",
+    "MongoDB",
+    "Mongoose"
+  ],
+  "author": "Dev Soni",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
