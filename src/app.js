@@ -30,5 +30,11 @@ app.use(express.static("public"))
 // Cookie Parser - Store, Retrieve and CRUD Operations on cookies in the browser
 app.use(cookieParser())
 
+// Routes import
+import userRouter from "./routes/user.routes.js"
 
-export { app }
+// Routes declaration
+app.use("/api/v1/users", userRouter);
+// http://localhost:8000/api/v1/users/<route>
+
+export { app };
