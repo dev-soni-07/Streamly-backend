@@ -1,10 +1,10 @@
 // asyncHandler using Promise
-
 const asyncHandler = (requestHandler) => {
-    return (err, req, res, next) => {
-        Promise.resolve(requestHandler(err, req, res, next))
-            .catch((err) => next(err));
-    }; 
+    return (req, res, next) => {
+        Promise.resolve(requestHandler(req, res, next))
+            .catch(next);
+        // .catch((err) => next(err));
+    };
 }
 
 export { asyncHandler };
@@ -14,7 +14,6 @@ export { asyncHandler };
 
 
 // asyncHandler using Try Catch Block
-
 // // const asyncHandler = () => {}
 // // const asyncHandler = (fn) => () => {}
 // // const asyncHandler = (fn) => async() => {}
@@ -31,5 +30,3 @@ export { asyncHandler };
 // }
 
 // export { asyncHandler }
-
-
