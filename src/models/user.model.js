@@ -54,7 +54,7 @@ const userSchema = new mongoose.Schema(
 // Don't use Arrow function in below because it won't be suitable for "this" keyword
 userSchema.pre("save", async function (err, req, res, next) {
     // Middleware to hash the password before saving
-    if (!this.isModified("password")) return next()
+    if (!this.isModified("password")) return next();
     this.password = bcrypt.hash(this.password, 10)
     next()
 })
@@ -66,8 +66,8 @@ userSchema.methods.isPasswordCorrect = async function (password) {
 
 
 // JWT is a bearer token, those who bear or have these tokens can access the resources or data
-userSchema.methods.generateAccessToken = async function () {
-    return await jwt.sign(
+userSchema.methods.generateAccessToken = function () {
+    return jwt.sign(
         {
             _id: this._id, // From MongoDB
             email: this.email,
@@ -80,8 +80,8 @@ userSchema.methods.generateAccessToken = async function () {
         }
     )
 }
-userSchema.methods.generateRefreshToken = async function () {
-    return await jwt.sign(
+userSchema.methods.generateRefreshToken = function () {
+    return jwt.sign(
         {
             _id: this._id, // From MongoDB
         },
