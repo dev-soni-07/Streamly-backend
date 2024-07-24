@@ -1,5 +1,5 @@
 {
-  "name": "youtube-backend-major-project",
+  "name": "streamly-backend",
   "version": "1.0.0",
   "description": "Streamly is an innovative full-stack project that seamlessly integrates the core functionalities of YouTube and Twitter into a single platform. This project showcases a robust backend architecture with Node.js, ExpressJS, and MongoDB, providing a scalable and efficient solution for real-time video streaming and social interaction. With Streamly, users can upload and watch videos, post tweets, interact with content through likes and comments, and enjoy a unified social media experience.",
   "type": "module",

@@ -54,9 +54,9 @@ const userSchema = new mongoose.Schema(
 // Don't use Arrow function in below because it won't be suitable for "this" keyword
 userSchema.pre("save", async function (err, req, res, next) {
     // Middleware to hash the password before saving
-    if (!this.isModified("password")) return next();
+    if (!this.isModified("password")) return next;
     this.password = await bcrypt.hash(this.password, 10)
-    next()
+    next
 })
 
 // Designing a custom method
