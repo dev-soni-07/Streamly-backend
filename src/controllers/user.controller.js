@@ -165,7 +165,7 @@ const logoutUser = asyncHandler(async (req, res) => {
         req.user._id,
         {
             $set: {
-                refreshToken: undefined
+                refreshToken: 1 // this will remove the field from the document
             }
         },
         {
@@ -252,7 +252,7 @@ const changeCurrentPassword = asyncHandler(async (req, res) => {
 const getCurrentUser = asyncHandler(async (req, res) => {
     return res
         .status(200)
-        .json(200, req.user, "Current user fetched successfully")
+        .json(new ApiResponse(200, req.user, "Current user fetched successfully"))
 })
 
 const updateAccountDetails = asyncHandler(async (req, res) => {
@@ -345,7 +345,7 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
         throw new ApiError(400, "Username is required")
     }
 
-    const channel = User.aggregate(
+    const channel = await User.aggregate(
         [
             {
                 $match: {
