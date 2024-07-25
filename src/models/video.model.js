@@ -41,7 +41,7 @@ const videoSchema = new mongoose.Schema(
     }
 )
 
-// Agggregation Queries
+// Aggregation Queries
 videoSchema.plugin(mongooseAggregatePaginate)
 
 export const Video = mongoose.model("Video", videoSchema)
