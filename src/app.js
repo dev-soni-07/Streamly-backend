@@ -27,7 +27,7 @@ app.use(express.urlencoded({
 app.use(express.static("public"))
 
 
-// Cookie Parser - Store, Retrieve and CRUD Operations on cookies in the browser
+// Cookie Parser Middleware - Store, Retrieve and CRUD Operations on cookies in the browser
 app.use(cookieParser())
 
 // Routes import
