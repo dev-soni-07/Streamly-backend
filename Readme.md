@@ -18,25 +18,6 @@ Streamly is an innovative full-stack project that seamlessly integrates the core
 - **Backend**: NodeJS, ExpressJS, MongoDB, Mongoose
 - **Dev Tools**: Nodemon
 
-## Installation
-
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/dev-soni-07/streamly.git
-    ```
-2. **Navigate to the project directory:**
-    ```bash
-    cd streamly
-    ```
-3. **Install the dependencies:**
-    ```bash
-    npm install
-    ```
-4. **Start the development server:**
-    ```bash
-    npm run dev
-    ```
-
 ## Usage
 
 - **Video Upload**: Users can upload and stream videos in high quality.
