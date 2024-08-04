@@ -1,6 +1,6 @@
 import mongoose from "mongoose"
 
-const videoSchema = new mongoose.Schema(
+const playlistSchema = new mongoose.Schema(
     {
         name: {
             type: String,
@@ -26,4 +26,4 @@ const videoSchema = new mongoose.Schema(
     }
 )
 
-export const Video = mongoose.model("Video", videoSchema)
+export const Playlist = mongoose.model("Playlist", playlistSchema)
