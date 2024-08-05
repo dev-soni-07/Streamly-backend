@@ -39,6 +39,45 @@ Streamly is an innovative backend project that integrates the core functionaliti
 - **Multer**: Middleware for handling `multipart/form-data`, which is primarily used for uploading files.
 - **JWT**: Standard for creating access tokens for an application.
 
+## API Endpoints
+
+### User Routes
+- `POST /api/v1/users/register` - Register a new user.
+- `POST /api/v1/users/login` - Login a user.
+- `GET /api/v1/users/:id` - Get user details.
+
+### Tweet Routes
+- `POST /api/v1/tweets` - Create a new tweet.
+- `GET /api/v1/tweets` - Get all tweets.
+- `GET /api/v1/tweets/:id` - Get a tweet by ID.
+
+### Subscription Routes
+- `POST /api/v1/subscriptions` - Create a new subscription.
+- `GET /api/v1/subscriptions` - Get all subscriptions.
+
+### Video Routes
+- `POST /api/v1/videos` - Upload a new video.
+- `GET /api/v1/videos` - Get all videos.
+- `GET /api/v1/videos/:id` - Get a video by ID.
+
+### Comment Routes
+- `POST /api/v1/comments` - Post a comment.
+- `GET /api/v1/comments` - Get all comments.
+
+### Like Routes
+- `POST /api/v1/likes` - Like a post.
+- `GET /api/v1/likes` - Get all likes.
+
+### Playlist Routes
+- `POST /api/v1/playlists` - Create a playlist.
+- `GET /api/v1/playlists` - Get all playlists.
+
+### Dashboard Route
+- `GET /api/v1/dashboard` - Get dashboard data.
+
+### Healthcheck Route
+- `GET /api/v1/healthcheck` - Check the health status of the API.
+
 ## Links
 - **Streamly-backend Repository:** [Backend](https://github.com/dev-soni-07/Streamly-backend/)
 - **Streamly-frontend Repository:** [Frontend](https://github.com/dev-soni-07/Streamly-frontend/)
