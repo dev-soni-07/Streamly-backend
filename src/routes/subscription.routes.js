@@ -10,11 +10,11 @@ const router = Router();
 router.use(verifyJWT); // Apply verifyJWT middleware to all routes in this file
 
 // Routes to get subscribed channels and toggle subscription
-router.route("/c/:channelId")
-    .get(getSubscribedChannels)
+router.route("/channel/:channelId")
+    .get(getSubscribedChannels) // Postman Testing Remaining
     .post(toggleSubscription);
 
 // Route to get subscribers of a user channel
-router.route("/u/:subscriberId").get(getUserChannelSubscribers);
+router.route("/user/:subscriberId").get(getUserChannelSubscribers); // Postman Testing Remaining
 
 export default router;

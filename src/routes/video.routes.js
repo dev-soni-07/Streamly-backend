@@ -21,14 +21,14 @@ router.route("/")
             { name: "videoFile", maxCount: 1 },
             { name: "thumbnail", maxCount: 1 },
         ]),
-        publishAVideo
+        publishAVideo // Postman Testing Remaining
     );
 
 // Routes to get, update, and delete a video
 router.route("/:videoId")
     .get(getVideoById)
     .delete(deleteVideo)
-    .patch(upload.single("thumbnail"), updateVideo);
+    .patch(upload.single("thumbnail"), updateVideo); // Postman Testing Remaining
 
 // Route to toggle publish status of a video
 router.route("/toggle/publish/:videoId").patch(togglePublishStatus);

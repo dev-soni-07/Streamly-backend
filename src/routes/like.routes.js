@@ -11,9 +11,9 @@ const router = Router();
 router.use(verifyJWT); // Apply verifyJWT middleware to all routes in this file
 
 // Routes to toggle likes for videos, comments, and tweets
-router.route("/toggle/v/:videoId").post(toggleVideoLike);
-router.route("/toggle/c/:commentId").post(toggleCommentLike);
-router.route("/toggle/t/:tweetId").post(toggleTweetLike);
+router.route("/toggle/video/:videoId").post(toggleVideoLike);
+router.route("/toggle/comment/:commentId").post(toggleCommentLike);
+router.route("/toggle/tweet/:tweetId").post(toggleTweetLike);
 
 // Route to get liked videos
 router.route("/videos").get(getLikedVideos);

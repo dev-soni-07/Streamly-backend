@@ -17,7 +17,7 @@ router.route("/:videoId")
     .post(addComment);
 
 // Route to delete and update a comment
-router.route("/c/:commentId")
+router.route("/comment/:commentId")
     .delete(deleteComment)
     .patch(updateComment);
 
